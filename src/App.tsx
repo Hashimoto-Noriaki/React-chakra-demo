@@ -1,9 +1,12 @@
 import { ChakraProvider, Button } from "@chakra-ui/react";
+import theme from "./theme/theme";
 
-export default function App ()  {
-  return(
-    <ChakraProvider>
-        <Button colorScheme="teal">ボタン</Button>
+export default function App() {
+  return (
+    <ChakraProvider theme={theme}>
+      <Button colorScheme="teal">ボタン</Button>
+      <p>テスト</p>
+      <b>Reactテスト</b>
     </ChakraProvider>
-  )
+  );
 }
