@@ -1,8 +1,9 @@
 import { memo,VFC } from "react"
 import { Route, Routes } from "react-router-dom";
-import { Login } from "../components/pages/Login";
-import { Home } from "../components/pages/Home"; 
+import { Login } from "../components/pages/login/Login";
+import { Home } from "../components/pages/home/Home"; 
 import { homeRoutes } from "./HomeRoutes";
+import { Page404 } from "../components/pages/Page404";
 
 export const Router: VFC = memo(() => {
     return(
@@ -19,6 +20,8 @@ export const Router: VFC = memo(() => {
                 element={route.children}
                 />
             ))}
+            {/* すべての未定義のルートには 404 ページを表示 */}
+            <Route path="*" element={<Page404 />} />
         </Routes>
     )
 })
