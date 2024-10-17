@@ -5,7 +5,7 @@ export const HeaderLayout: VFC<{ children: React.ReactNode }> = ({ children }) =
     return (
         <>
             <Header />
-            <div style={{ marginTop: "80px" }}> {/* Adjust for fixed header */}
+            <div style={{ marginTop: "80px" }}> {/* ヘッダーの高さ分のマージンを設定 */}
                 {children}
             </div>
         </>
